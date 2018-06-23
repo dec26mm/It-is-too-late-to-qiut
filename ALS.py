@@ -57,6 +57,6 @@ Model.fit(Confidence * Rating)
 
 
 user_items = Rating.T.tocsr()
-recommendations = Model.recommend('cd5829597b', user_items)
+# recommendations = Model.recommend('cd5829597b', user_items)
 # cd5829597b
 
