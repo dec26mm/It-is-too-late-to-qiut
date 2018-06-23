@@ -1,5 +1,3 @@
-import numpy as np
-from numpy import genfromtxt
 import pandas as pd
 
 for file in ['data/book_ratings_train.csv', 'data/book_ratings_test.csv', 'data/books.csv', 'data/implicit_ratings.csv',

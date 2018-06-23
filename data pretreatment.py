@@ -9,11 +9,11 @@ with open('data/implicit_ratings.csv', encoding='utf-8') as f:
 with open('data/book_ratings_train.csv', encoding='utf-8') as f:
     Train = pd.read_csv(f)
 
+ZeroRating['Book-Rating'] = 1
 User['Age'] = User['Age'].fillna(User['Age'].mean())
 Train = pd.concat([Train, ZeroRating], keys=['User-ID', 'ISBN', 'Book-Rating'], axis=0)
 
 Data = pd.merge(Train, User, on=['User-ID'], how='outer')
-Data = Data.fillna(0)
 
 Data.to_csv('user data.csv', encoding='utf-8')
 
