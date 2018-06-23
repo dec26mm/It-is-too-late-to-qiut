@@ -1,3 +1,13 @@
 
 Alternating Least Squares (ALS)
 
+python package: implicit
+http://implicit.readthedocs.io/en/latest/quickstart.html
+
+reference:
+https://jessesw.com/Rec-System/
+old but clear
+
+https://towardsdatascience.com/recommending-github-repositories-with-google-bigquery-and-the-implicit-library-e6cce666c77
+new one
+
