@@ -19,7 +19,7 @@ Rating = coo_matrix((np.ones(Data.shape[0]),
                     Data['User-ID'].cat.codes.copy())))
 # train model
 Model = implicit.als.AlternatingLeastSquares(factors=50, regularization=0.01, dtype=np.float64, iterations=50)
-Confidence = 400
+Confidence = 4000
 Model.fit(Confidence * Rating)
 
 ISBN = dict(enumerate(Data['ISBN'].cat.categories))
