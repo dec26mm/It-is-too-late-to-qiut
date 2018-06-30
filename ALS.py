@@ -4,6 +4,8 @@ import numpy as np
 from scipy.sparse import coo_matrix
 import random
 
+Try = 19
+
 with open('user data.csv', encoding='utf-8') as f:
     Data = pd.read_csv(f)
 with open('data/book_ratings_test.csv', encoding='utf-8') as f:
@@ -19,8 +21,10 @@ Rating = coo_matrix((np.ones(Data.shape[0]),
                     (Data['ISBN'].cat.codes.copy(),
                     Data['User-ID'].cat.codes.copy())))
 # train model
-Model = implicit.als.AlternatingLeastSquares(factors=50, regularization=5000, dtype=np.float64, iterations=50)
-Confidence = 4000
+Model = implicit.als.AlternatingLeastSquares(factors=1, regularization=0, dtype=np.float64, iterations=1)
+Confidence = 10000
+Mag = 2
+# 1, 0.01, 1, 10000, 2 -> 1.68 / 29.26 (try18)
 Model.fit(Confidence * Rating)
 
 ISBN = dict(enumerate(Data['ISBN'].cat.categories))
@@ -36,8 +40,9 @@ for i, k in zip(Test['User-ID'], Test['ISBN']):
     try:
         UserVec = Model.user_factors[UserId['%s' % i]]
         # BookVec = Model.item_factors[ISBNId['%s' % k]]
+        # PredictValue = np.dot(UserVec, BookVec.T)
         PredictVec = np.dot(UserVec, Model.item_factors.T)
-        PredictVec = PredictVec * (10/PredictVec.max())  # normalize
+        PredictVec = PredictVec * (10/PredictVec.max()) * Mag  # normalize
         PredictValue = PredictVec[ISBNId['%s' % k]]  # find the exact value
         if PredictValue >= 10:
             PredictValue = 10
@@ -45,9 +50,13 @@ for i, k in zip(Test['User-ID'], Test['ISBN']):
             PredictValue = 1
         Predictions.append(PredictValue)
     except KeyError:
-        Predictions.append(random.randint(1, 10))
+        # Predictions.append(random.randint(1, 10))
+        Predictions.append(8)
+        # Predictions.append(None)
     except IndexError:
-        Predictions.append(random.randint(1, 10))
+        # Predictions.append(random.randint(1, 10))
+        Predictions.append(8)
+        # Predictions.append(None)
     j = j + 1
 
     # print(i)
@@ -58,7 +67,8 @@ Output = pd.DataFrame(Predictions, columns=['Rating'])
 Output_ = pd.DataFrame([None]*len(Predictions), columns=['Rating'])
 
 # Output['Rating'] = Output['Rating'].fillna(Output['Rating'].mean())
-Output.to_csv('try4_float.csv', index=False, header=False)
+Output.to_csv('try%s_float.csv' % Try, index=False, header=False)
 
-Output_['Rating'] = Output['Rating'].astype('int64')
-Output_.to_csv('try4_int.csv', index=False, header=False)
+Output_['Rating'] = Output['Rating'].apply(np.round)
+Output_['Rating'] = Output_['Rating'].astype('int64')
+Output_.to_csv('try%s_int.csv' % Try, index=False, header=False)
