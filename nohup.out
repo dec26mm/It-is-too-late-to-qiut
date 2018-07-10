@@ -1,0 +1,37 @@
+[I 19:21:26.569 NotebookApp] Serving notebooks from local directory: /home/k123/git_repo/it-is-too-late-to-qiut
+[I 19:21:26.569 NotebookApp] 0 active kernels
+[I 19:21:26.569 NotebookApp] The Jupyter Notebook is running at:
+[I 19:21:26.569 NotebookApp] https://[all ip addresses on your system]:5000/
+[I 19:21:26.570 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 19:21:26.885 NotebookApp] Interrupted...
+[I 19:21:26.885 NotebookApp] Shutting down 0 kernels
+[I 19:21:30.012 NotebookApp] Serving notebooks from local directory: /home/k123/git_repo/it-is-too-late-to-qiut
+[I 19:21:30.012 NotebookApp] 0 active kernels
+[I 19:21:30.012 NotebookApp] The Jupyter Notebook is running at:
+[I 19:21:30.012 NotebookApp] https://[all ip addresses on your system]:5000/
+[I 19:21:30.012 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 19:21:34.161 NotebookApp] 404 GET /notebooks/emotion-recognition-neural-networks/main.ipynb (118.160.94.90): No such file or directory: emotion-recognition-neural-networks/main.ipynb
+[W 19:21:34.213 NotebookApp] 404 GET /notebooks/emotion-recognition-neural-networks/main.ipynb (118.160.94.90) 53.28ms referer=https://111.240.49.151:5000/tree/emotion-recognition-neural-networks
+[I 19:21:38.345 NotebookApp] 302 GET / (118.160.94.90) 0.86ms
+[I 19:21:43.137 NotebookApp] Creating new notebook in 
+[I 19:21:44.043 NotebookApp] Kernel started: 0c8deab6-ea87-4ab2-a51f-0551b1ea3637
+[I 19:21:44.249 NotebookApp] Adapting to protocol v5.1 for kernel 0c8deab6-ea87-4ab2-a51f-0551b1ea3637
+[W 19:24:44.249 NotebookApp] WebSocket ping timeout after 119938 ms.
+[I 19:24:49.252 NotebookApp] Starting buffering for 0c8deab6-ea87-4ab2-a51f-0551b1ea3637:82386cb41c1b41039b8f7e573072192f
+[W 19:26:37.603 NotebookApp] SSL Error on 10 ('158.85.81.120', 37404): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:590)
+[I 19:51:31.305 NotebookApp] Saving file at /Codes.ipynb
+[I 19:51:39.602 NotebookApp] Adapting to protocol v5.1 for kernel 0c8deab6-ea87-4ab2-a51f-0551b1ea3637
+[I 19:51:39.604 NotebookApp] Restoring connection for 0c8deab6-ea87-4ab2-a51f-0551b1ea3637:82386cb41c1b41039b8f7e573072192f
+[W 19:53:08.037 NotebookApp] Replacing stale connection: 0c8deab6-ea87-4ab2-a51f-0551b1ea3637:82386cb41c1b41039b8f7e573072192f
+[W 19:53:09.605 NotebookApp] WebSocket ping timeout after 90000 ms.
+[I 19:53:13.040 NotebookApp] Starting buffering for 0c8deab6-ea87-4ab2-a51f-0551b1ea3637:82386cb41c1b41039b8f7e573072192f
+[I 19:53:13.041 NotebookApp] Adapting to protocol v5.1 for kernel 0c8deab6-ea87-4ab2-a51f-0551b1ea3637
+[I 19:53:13.053 NotebookApp] Restoring connection for 0c8deab6-ea87-4ab2-a51f-0551b1ea3637:82386cb41c1b41039b8f7e573072192f
+[I 19:57:08.780 NotebookApp] Saving file at /Codes.ipynb
+[I 19:59:08.747 NotebookApp] Saving file at /Codes.ipynb
+[I 20:01:08.745 NotebookApp] Saving file at /Codes.ipynb
+[I 20:04:07.709 NotebookApp] Saving file at /Codes.ipynb
+[I 20:04:08.526 NotebookApp] Saving file at /Codes.ipynb
+[C 20:04:17.479 NotebookApp] received signal 15, stopping
+[I 20:04:17.480 NotebookApp] Shutting down 1 kernel
+[I 20:04:17.681 NotebookApp] Kernel shutdown: 0c8deab6-ea87-4ab2-a51f-0551b1ea3637
